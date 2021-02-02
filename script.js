@@ -13,7 +13,7 @@ const data_url = "https://api.airvisual.com/v2/nearest_city?lat=" +lat+ "&lon=" 
 //Map
 var map = L.map('map').setView([lat, lon], 15);
 
-L.tileLayer('https://api.maptiler.com/maps/outdoor/{z}/{x}/{y}.png?key=VJDOQr3nasl8c1OHLipH', {
+L.tileLayer('https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.png?key=VJDOQr3nasl8c1OHLipH', {
 	attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
 }).addTo(map);
 //Map
