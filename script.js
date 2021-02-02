@@ -39,7 +39,7 @@ async function weatherpollutants(){
 }
 
 function wdstr(dir_num){
-	const wd_str;
+	let wd_str;
 	if ((dir_num >= 337 && dir_num <= 360) || (dir_num >= 0 && dir_num <= 22))
 		wd_str = "North";
 	else if (dir_num > 22 && dir_num < 67)
