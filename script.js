@@ -32,7 +32,7 @@ async function weatherpollutants(){
 	html_hu.textContent = humidity + '\u0025';
 	
 	const wind_speed = statistics.data.current.weather.ws;
-	html_ws.textContent = wind_speed + ' m/s';
+	html_ws.textContent = (wind_speed*3.6) + ' km/h';
 	
 	const wind_direction = statistics.data.current.weather.wd;
 	html_wd.textContent = wdstr(wind_direction) + ' (' + wind_direction + '\u00B0)';
