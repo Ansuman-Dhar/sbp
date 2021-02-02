@@ -35,7 +35,7 @@ async function main(){
 	html_ws.textContent = wind_speed + ' m/s';
 	
 	const wind_direction = statistics.data.current.pollution.aqius;
-	html_wd.textContent = wind_direction + '\u2103';
+	html_wd.textContent = wind_direction + '\u00B0';
 }
 
 main();
