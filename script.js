@@ -18,7 +18,7 @@ L.tileLayer('https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}@2x.jpg?key=VJDOQr3
 }).addTo(map);
 //Map
 
-async function main(){
+async function weatherpollutants(){
 	var response = await fetch(data_url);
 	var statistics = await response.json();
 	
@@ -61,4 +61,4 @@ function wdstr(dir_num){
 	return wd_str;
 }
 
-main();
+weatherpollutants();
