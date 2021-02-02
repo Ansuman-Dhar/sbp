@@ -34,8 +34,31 @@ async function main(){
 	const wind_speed = statistics.data.current.weather.ws;
 	html_ws.textContent = wind_speed + ' m/s';
 	
-	const wind_direction = statistics.data.current.pollution.aqius;
-	html_wd.textContent = wind_direction + '\u00B0';
+	const wind_direction = statistics.data.current.weather.wd;
+	html_wd.textContent = wdstr(wind_direction) + ' (' + wind_direction + '\u00B0)';
+}
+
+function wdstr(dir_num){
+	const wd_str;
+	if ((dir_num >= 337 && dir_num <= 360) || (dir_num >= 0 && dir_num <= 22))
+		wd_str = "North";
+	else if (dir_num > 22 && dir_num < 67)
+		wd_str = "North-East";
+	else if (dir_num >= 67 && dir_num <= 112)
+		wd_str = "East";
+	else if (dir_num > 112 && dir_num < 157)
+		wd_str = "South-East";
+	else if (dir_num >= 157 && dir_num <= 202)
+		wd_str = "South";
+	else if (dir_num > 202 && dir_num < 247)
+		wd_str = "South-West";
+	else if (dir_num >= 247 && dir_num <= 292)
+		wd_str = "West";
+	else if (dir_num > 292 && dir_num < 337)
+		wd_str = "North-West";
+	else
+		wd_str = "WIND DIR CALC ERR";
+	return wd_str;
 }
 
 main();
